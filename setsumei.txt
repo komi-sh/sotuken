@@ -1,0 +1,21 @@
+1 makevec.py
+    "./NCBIDLout/dlxml.json"を読み取り、辞書に格納
+    生物種名とアミノ酸配列を辞書にして保存
+    アミノ酸配列の長さをそろえる
+    重みを付けて計算し、三次元座標化
+    "./funcout/vec.json"に出力
+
+2 pca.py
+    "./funcout/vec.json"を読み取り、辞書に格納
+    主成分分析をして座標群を"./funcout/pcavec.json"に出力、
+    固有値などを"./funcout/pcadata.json"
+
+3 dft.py
+    "./funcout/pca.json"を読み取り、辞書に格納
+    離散フーリエ変換をして"./funcout/dft.json"に出力
+
+4 cossim.py
+    "./funcout/dft.json"を読み取り、辞書に格納
+    コサイン類似度を計算、アークコサインに変換し、"./funcout/cossim.json"に出力
+    さらに"./funcout/cossim.txt"にfilipsが読み取れる形式で出力
+
